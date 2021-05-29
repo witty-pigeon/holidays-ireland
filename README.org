@@ -1,0 +1,24 @@
+#+TITLE: Holidays Ireland
+
+* Holidays Ireland
+This package provides national holidays for Ireland.
+This package will integrate with the calendar
+* Usage
+
+With =require=:
+#+begin_src elisp
+(require 'holidays-ireland)
+;; this is in case you want to override the default US holidays
+(setq holiday-general-holidays holiday-ireland-holidays)
+(setq calendar-holidays holiday-ireland-holidays)
+#+end_src
+
+with =use-package=
+
+#+begin_src elisp
+(use-package 'holidays-ireland
+  :config
+  ;; this is in case you want to override the default US holidays
+  (setq holiday-general-holidays holiday-ireland-holidays)
+  (setq calendar-holidays holiday-ireland-holidays))
+#+end_src
